@@ -1,0 +1,45 @@
+<div class="header_bar bar_botton_border clear">
+    <div class="s_btn s_btn_left fl" ng-click="persona.goBackPrev()">
+        <i class="fa fa-angle-left"></i>
+    </div>
+    <h4 class="title_text fl">编辑个人资料</h4>
+    <div class="s_btn s_btn_right fr">
+        <i class="fa fa-ellipsis-h"></i>
+    </div>
+</div>
+
+<div class="s_content ">
+    <div class="s_list">
+        <ul class="s_list_item">
+            <li class="s_item clear">
+                <span>城市</span>
+                <input type="text" style="width: 60%">
+                <select class="fr">
+                    <option>上海</option>
+                    <option>成都</option>
+                    <option>无锡</option>
+                    <option>昆明</option>
+                    <option>天津</option>
+                </select>
+            </li>
+
+            <li class="s_item">
+                <span>部门</span>
+                <input type="text" >
+            </li>
+
+            <li class="s_item">
+                <span>名称</span>
+                <input type="text" >
+            </li>
+        </ul>
+    </div>
+    <button
+            class="btn btn-warning btn-block"
+            ng-click="persona.PersonalData()">
+        确定
+    </button>
+</div>
+
+
+

@@ -1,0 +1,143 @@
+<div class="header_bar bar_botton_border clear">
+    <div class="s_btn s_btn_left fl" ng-click="shareCapture.goBackPrev()">
+        <i class="fa fa-angle-left"></i>
+    </div>
+    <h4 class="title_text fl">上传截图</h4>
+    <div class="s_btn s_btn_right fr">
+        <i class="fa fa-ellipsis-h"></i>
+    </div>
+</div>
+
+<div class="s_content">
+    <div class="CircleFriends clear">
+        <div class="shareTitle">
+            已将思创吉宝文章转发至
+        </div>
+
+        <div class="list_content">
+
+            <div class="img_list">
+                <div class="list_title">
+                    <img src="././static/img/icon_pengyouquan.png" alt="">
+                    <span>朋友圈</span>
+                </div>
+                <ul class="list_img">
+                    <li ng-repeat="imageSrc in imgshows track by $index">
+                        <img
+                                ng-src="{{imageSrc}}"
+                                alt="">
+                        <i ng-click="shareCapture.DeleteImg($index, imgshows)"
+                                class=" fa fa-times del"></i>
+                    </li>
+                    <li class="add_btn" ng-click="shareCapture.addimage(1)" ng-if="imgshows.length<=2">
+                        <img src="././static/img/plus.png" alt="">
+                        <div class="file-box" >
+                            <input
+                                    type="file"
+                                    name="file"
+                                    file-model="myFile"
+                                    accept="image/*"
+                                    class="file-btn"/>
+                            <div>上传截图</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="img_list">
+                <div class="list_title">
+                    <img src="././static/img/icon_50.png" alt="">
+                    <span>50以下群</span>
+                </div>
+                <ul class="list_img">
+                    <li ng-repeat="imageSrc in imgshows50 track by $index">
+                        <img
+                                ng-src="{{imageSrc}}"
+                                alt="">
+                        <i ng-click="shareCapture.DeleteImg($index, imgshows50)"
+                           class=" fa fa-times del"></i>
+                    </li>
+                    <li class="add_btn" ng-click="shareCapture.addimage(50)" ng-if="imgshows50.length<=2">
+                        <img src="././static/img/plus.png" alt="">
+                        <div class="file-box" >
+                            <input
+                                    type="file"
+                                    name="file"
+                                    file-model="myFile"
+                                    accept="image/*"
+                                    class="file-btn"/>
+                            <div>上传截图</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="img_list">
+                <div class="list_title">
+                    <img src="././static/img/icon_100.png" alt="">
+                    <span>50-100群</span>
+                </div>
+                <ul class="list_img">
+                    <li ng-repeat="imageSrc in imgshows100 track by $index">
+                        <img
+                                ng-src="{{imageSrc}}"
+                                alt="">
+                        <i ng-click="shareCapture.DeleteImg($index, imgshows100)"
+                           class=" fa fa-times del"></i>
+                    </li>
+                    <li class="add_btn" ng-click="shareCapture.addimage(100)" ng-if="imgshows100.length<=2">
+                        <img src="././static/img/plus.png" alt="">
+                        <div class="file-box" >
+                            <input
+                                    type="file"
+                                    name="file"
+                                    file-model="myFile"
+                                    accept="image/*"
+                                    class="file-btn"/>
+                            <div>上传截图</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="img_list">
+                <div class="list_title">
+                    <img src="././static/img/icon_500.png" alt="">
+                    <span>100以上群</span>
+                </div>
+                <ul class="list_img">
+                    <li ng-repeat="imageSrc in imgshows500 track by $index">
+                        <img
+                                ng-src="{{imageSrc}}"
+                                alt="">
+                        <i ng-click="shareCapture.DeleteImg($index, imgshows500)"
+                           class=" fa fa-times del"></i>
+                    </li>
+                    <li class="add_btn" ng-click="shareCapture.addimage(500)" ng-if="imgshows500.length<=2">
+                        <img src="././static/img/plus.png" alt="">
+                        <div class="file-box" >
+                            <input
+                                    type="file"
+                                    name="file"
+                                    file-model="myFile"
+                                    accept="image/*"
+                                    class="file-btn"/>
+                            <div>上传截图</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer_btn">
+    <button
+            class="btn btn-warning btn60"
+             ng-click="shareCapture.UploadScreenshot()">
+        上传截图
+    </button>
+    <ins ng-click="shareCapture.amendPersonData()" >修改个人资料</ins>
+</div>
+
+
